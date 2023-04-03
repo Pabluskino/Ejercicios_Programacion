@@ -11,9 +11,9 @@ namespace Ejercicios_1
         {
             GameObject cubo1 = GameObject.CreatePrimitive(PrimitiveType.Cube);
             GameObject cubo2 = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            cubo2.transform.localScale = cubo1.transform.localScale * 2;
+            cubo2.transform.localScale = cubo1.transform.localScale * 2f;
             GameObject cubo3 = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            cubo3.transform.localScale = cubo2.transform.localScale * 2;
+            cubo3.transform.localScale = cubo2.transform.localScale * 2f;
         }
     } 
 }

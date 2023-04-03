@@ -10,7 +10,7 @@ namespace Ejercicios_1
         private void Start()
         {
             GameObject cubo = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            cubo.transform.localScale *= 2;
+            cubo.transform.localScale *= 2f;
         }
     } 
 }

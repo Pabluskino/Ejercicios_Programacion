@@ -9,15 +9,23 @@ namespace Ejercicios_1
     {
         private void Start()
         {
+            GameObject prevSphere = null;
             for (int i = 0; i < 12; i++)
             {
                 GameObject esfera = GameObject.CreatePrimitive(PrimitiveType.Sphere);
                 esfera.name = $"Esfera{i}";
+                /* ❕ GameObject.Find gasta muchos recursos, hay que evitar usarlo
                 if (i > 0)
                 {
                     GameObject prevSphere = GameObject.Find($"Esfera{i-1}");
-                    esfera.transform.localScale = prevSphere.transform.localScale*2;
+                    esfera.transform.localScale = prevSphere.transform.localScale*2f;
                 }
+                */
+                if (prevSphere != null)
+                {
+                    esfera.transform.localScale = prevSphere.transform.localScale*2f;
+                }
+                prevSphere = esfera;
             }
         }
     } 
